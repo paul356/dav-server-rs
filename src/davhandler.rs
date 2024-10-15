@@ -416,7 +416,7 @@ where
                 resp
             }
             Err(err) => {
-                debug!("== END REQUEST result {:?}", err);
+                info!("== END REQUEST result {:?}", err);
                 let mut resp = Response::builder();
                 if is_ms && err.statuscode() == StatusCode::NOT_FOUND {
                     // This is an attempt to convince Windows to not

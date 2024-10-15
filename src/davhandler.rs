@@ -412,7 +412,7 @@ where
         // Turn any DavError results into a HTTP error response.
         match self.handle2(req).await {
             Ok(resp) => {
-                debug!("== END REQUEST result OK");
+                info!("== END REQUEST result OK");
                 resp
             }
             Err(err) => {
